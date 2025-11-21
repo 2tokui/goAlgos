@@ -10,6 +10,14 @@ func NewQueue() *Queue {
 	return &Queue{}
 }
 
+func (s *Queue) IsEmpty() bool {
+	return len(s.Collection) == 0
+}
+
+func (s *Queue) Length() int {
+	return len(s.Collection)
+}
+
 func (s *Queue) Enqueue(thing any) {
 	s.Collection = append(s.Collection, thing)
 	s.Tail = thing
