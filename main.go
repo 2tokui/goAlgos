@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/2tokui/goAlgos/algo"
 	"github.com/Zubayear/ryushin/priorityqueue"
@@ -77,7 +78,36 @@ func main() {
 	ll.Push(false)
 
 	//ll.Pop(false)
-	ll.Pop("data")
 
 	ll.PrintEverything()
+
+	fmt.Println("======== Linear Search ========")
+	var myIntArray = []int{9, 2, 3, 1, 0, 4, 6, 8}
+	iterations := 1_000_000
+	for range iterations {
+		myIntArray = append(myIntArray, 0)
+	}
+	myIntArray[999999] = 5
+
+	startTime := time.Now()
+	algo.LinearSearch(myIntArray, 5)
+	elapsedTime := time.Since(startTime)
+
+	fmt.Printf("Elapsed Time: %d ns\n", elapsedTime.Nanoseconds())
+
+	fmt.Println("======== Binary Search ========")
+	orderedCollection := []int{0, 3, 5, 6, 9, 11, 13, 15, 19, 40, 60}
+	findAndPrint := func(guy int) {
+		position := algo.BinarySearch(orderedCollection, guy)
+		if position == -1 {
+			fmt.Println(guy, "doesn't exist in orderedCollection")
+		} else {
+			fmt.Printf("Position of %d orderedCollection: %d\n", guy, position)
+		}
+	}
+	findAndPrint(19)
+	findAndPrint(0)
+	findAndPrint(9)
+	findAndPrint(60)
+	findAndPrint(999)
 }
