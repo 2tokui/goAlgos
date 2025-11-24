@@ -110,4 +110,10 @@ func main() {
 	findAndPrint(9)
 	findAndPrint(60)
 	findAndPrint(999)
+
+	fmt.Println("======== Interpolation Search ========")
+	dataArray := []int{2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192}
+	idx := algo.InterpolationSearch(dataArray, 4096)
+	fmt.Printf("%d is at %d\n", 4096, idx)
 }
+
