@@ -115,5 +115,17 @@ func main() {
 	dataArray := []int{2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192}
 	idx := algo.InterpolationSearch(dataArray, 4096)
 	fmt.Printf("%d is at %d\n", 4096, idx)
+
+	fmt.Println("======== Bubble Sort ========")
+	intArray := []int{5, 2, 1, 3, 9, 10, 11, 98, 1, 4, 12, 10, 30, 50, 40}
+	fmt.Println("intArray:", intArray)
+	algo.BubbleSort(intArray)
+	fmt.Println("intArray:", intArray)
+
+	fmt.Println("======== Selection Sort ========")
+	intArrayAgain := []int{5, 2, 1, 3, 9, 10, 11, 98, 1, 4, 12, 10, 30, 50, 40}
+	fmt.Println("intArrayAgain:", intArrayAgain)
+	algo.SelectionSort(intArrayAgain)
+	fmt.Println("intArrayAgain:", intArrayAgain)
 }
 
