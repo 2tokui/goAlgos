@@ -127,5 +127,11 @@ func main() {
 	fmt.Println("intArrayAgain:", intArrayAgain)
 	algo.SelectionSort(intArrayAgain)
 	fmt.Println("intArrayAgain:", intArrayAgain)
+
+	fmt.Println("======== Insertion Sort ========")
+	intInsertionArray := []int{5, 2, 1, 3, 9, 10, 11, 98, 1, 4, 12, 10, 30, 50, 40}
+	fmt.Println("intInsertionArray:", intInsertionArray)
+	algo.InsertionSort(intInsertionArray)
+	fmt.Println("intInsertionArray:", intInsertionArray)
 }
 
