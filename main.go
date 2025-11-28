@@ -133,5 +133,12 @@ func main() {
 	fmt.Println("intInsertionArray:", intInsertionArray)
 	algo.InsertionSort(intInsertionArray)
 	fmt.Println("intInsertionArray:", intInsertionArray)
+
+	fmt.Println("======== Recursion Example ========")
+	path := algo.RandomWalk(algo.Vector{X:1, Y:1}, 40)
+	for _, vec := range path {
+		fmt.Println(vec)
+	}
+	fmt.Println("Factorial: !5 ->", algo.Factorial(5))
 }
 
