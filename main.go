@@ -140,5 +140,11 @@ func main() {
 		fmt.Println(vec)
 	}
 	fmt.Println("Factorial: !5 ->", algo.Factorial(5))
+
+	fmt.Println("======== Merge Sort ========")
+	mergeThis := []int{5, 2, 1, 3, 9, 10, 11, 98, 1, 4, 12, 10, 30, 50, 40}
+	fmt.Println(mergeThis)
+	algo.MergeSort(mergeThis)
+	fmt.Println(mergeThis)
 }
 
