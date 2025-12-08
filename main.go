@@ -135,10 +135,10 @@ func main() {
 	fmt.Println("intInsertionArray:", intInsertionArray)
 
 	fmt.Println("======== Recursion Example ========")
-	path := algo.RandomWalk(algo.Vector{X:1, Y:1}, 40)
-	for _, vec := range path {
-		fmt.Println(vec)
-	}
+	/*path := */algo.RandomWalk(algo.Vector{X:1, Y:1}, 40)
+	//for _, vec := range path {
+	//	fmt.Println(vec)
+	//}
 	fmt.Println("Factorial: !5 ->", algo.Factorial(5))
 
 	fmt.Println("======== Merge Sort ========")
@@ -146,5 +146,16 @@ func main() {
 	fmt.Println(mergeThis)
 	algo.MergeSort(mergeThis)
 	fmt.Println(mergeThis)
+
+	//fmt.Println("======== Playing with concurrency ========")
+	//rinChan := make(chan string)
+	//go ConcurrentProcedure(rinChan)
+	//val := <- rinChan
+	//fmt.Println("Retrieved from channel:", val)
+
+	fmt.Println("======== Quick Sort ========")
+	quickSortThis := []int{5, 2, 1, 3, 9, 10, 11, 98, 1, 4, 12, 10, 30, 50, 40}
+	fmt.Println(quickSortThis)
+	fmt.Println(algo.QuickSort(quickSortThis))
 }
 
